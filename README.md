@@ -13,8 +13,8 @@
 - <a href="#checking">Список проверок, реализованных в автоматизированных тест-кейсах</a>
 - <a href="#console">Запуск тестов (Из терминала)</a>
 - <a href="#jenkins">Сборка в Jenkins</a>
-- <a href="#allureReport">Allure-отчет</a>
-- <a href="#allure">Интеграция с Allure TestOps</a>
+- <a href="#allure">Allure-отчет</a>
+- <a href="#allure-testops">Интеграция с Allure TestOps</a>
 - <a href="#jira">Интеграция с Jira</a>
 - <a href="#tg"> Уведомление в Telegram о результатах выполнения автоматизированных тестов</a>
 - <a href="#movie">Видеопример прохождения тестов Browserstack</a>
@@ -69,3 +69,43 @@ gradle clean local_test -DdeviceHost=local
 ```bash 
 gradle clean remote_test -DdeviceHost=remote
 ```
+____
+<a id="jenkins"></a>
+## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/BankOTP/)</a>
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/job/BankOTP/"><img src="media/screen/jenkins.png" alt="Jenkins"/></a>  
+</p>
+
+<a id="allure"></a>
+## <img src="media/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Allure <a target="_blank" href="https://jenkins.autotests.cloud/job/wiki_project/allure/">отчёт</a>
+
+### *Основная страница отчёта*
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="src/media/screenshots/allureReport.png">  
+</p>  
+
+<a id="allure-testops"></a>
+## <img src="media/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3879/dashboards">Allure TestOps</a>
+### *Allure TestOps Dashboard*
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="src/media/screenshots/allureTestOps.png">  
+</p>  
+
+
+<a id="telegram"></a>
+## <img src="media/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a>Уведомление в Telegram
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/screen/telegram.png">  
+</p>
+
+____
+<a id="movie"></a>
+## <img alt="Browserstack" height="25" src="media/logo/Browserstack.svg" width="25"/></a> Видеопример выполнения теста Browserstack
+
+____
+<p align="center">
+<img title="Browserstack Video" src="media/screen/BrowserStack.gif" width="350" height="350"  alt="video">   
+</p>
