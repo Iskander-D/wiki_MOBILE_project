@@ -14,4 +14,7 @@ public interface LocalConfig extends Config {
     @Key("os_version")
     String getVersion();
 
+    @Key("localServerUrl")
+    String getServerUrl();
+
 }

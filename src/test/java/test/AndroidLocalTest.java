@@ -64,7 +64,7 @@ public class AndroidLocalTest extends TestBase {
         });
         step("Check language added", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/wiki_language_title"))
-                        .filterBy(text("Russian")).shouldHave(size(1))); // дописать тектст русский
+                        .filterBy(text("Russian")).shouldHave(size(1)));
     }
 
     @Test
@@ -79,7 +79,7 @@ public class AndroidLocalTest extends TestBase {
         });
         step("Verify content found", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/feed_content_type_title"))
-                        .shouldHave(sizeGreaterThan(0)));
+                        .shouldHave(sizeGreaterThan(1)));
     }
 
     @Test
