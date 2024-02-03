@@ -40,3 +40,20 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+# Project gen files
+.idea
+.allure/
+.gradle/
+allure-results/
+gradle/
+build/
+bin/
+out/
+logs/
+target/
+.classpath
+.project
+.settings/org.eclipse.buildship.core.prefs
+.vscode
+/gradlew
+/gradlew.bat
