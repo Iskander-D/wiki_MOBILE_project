@@ -19,8 +19,9 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         if (deviceHost == null) {
-//            deviceHost = "remote";
-            deviceHost = "local"; // было Remote
+        // deviceHost = "remote";
+            deviceHost = "local";
+
         }
         switch (deviceHost) {
             case "remote":
