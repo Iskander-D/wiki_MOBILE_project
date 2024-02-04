@@ -3,9 +3,7 @@
 <img src="media/logo/WikiLogo.png" alt="MainLogo" width="950"/></a>  
 </p>
 
-
-
-
+<a name="наверх"></a>
 
 ## :scroll: Содержание:
 
@@ -38,6 +36,7 @@ ____
 <a href="https://www.browserstack.com/"><img width="6%" title="BrowserStack" src="media/logo/Browserstack.svg"></a>
 </p>
 
+<a id="checking"></a>
 ## 🏁 Реализованные проверки:
 
 ### При запуске локально (local) на эмуляторе:
@@ -56,7 +55,7 @@ ____
 - ✓ *Проверка наличия заголовка*
 
 
-
+<a id="console"></a>
 ## 🚀 Команда для запуска автотестов из терминала
 
 Запуск локально (local) на эмуляторе:
@@ -73,7 +72,7 @@ ____
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/BankOTP/)</a>
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/BankOTP/"><img src="media/screen/jenkins.png" alt="Jenkins"/></a>  
+<a href="https://jenkins.autotests.cloud/job/wikiMobile/"><img src="media/screen/Jenkins.png" alt="Jenkins"/></a>  
 </p>
 
 <a id="allure"></a>
@@ -82,23 +81,29 @@ ____
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="src/media/screenshots/allureReport.png">  
+<img title="Allure Overview Dashboard" src="media/screen/AllureReport.png">  
 </p>  
 
 <a id="allure-testops"></a>
-## <img src="media/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3879/dashboards">Allure TestOps</a>
+## <img src="media/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4019/dashboards">Allure TestOps</a>
 ### *Allure TestOps Dashboard*
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="src/media/screenshots/allureTestOps.png">  
+<img title="Allure TestOps Dashboard" src="media/screen/AllureTO.png">  
 </p>  
 
+<a id="jira"></a>
+## <img src="media/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1097">Jira</a>
 
-<a id="telegram"></a>
+<p align="center">  
+<img title="Jira" src="media/screen/Jira.png">  
+</p>
+
+<a id="tg"></a>
 ## <img src="media/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a>Уведомление в Telegram
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/screen/telegram.png">  
+<img title="Allure Overview Dashboard" src="media/screen/Telegram.png">  
 </p>
 
 ____
@@ -109,3 +114,5 @@ ____
 <p align="center">
 <img title="Browserstack Video" src="media/screen/BrowserStack.gif" width="350" height="350"  alt="video">   
 </p>
+
+[Наверх ⬆](#наверх)
