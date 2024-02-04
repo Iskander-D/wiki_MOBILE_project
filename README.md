@@ -70,7 +70,7 @@ gradle clean remote_test -DdeviceHost=remote
 ```
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/BankOTP/)</a>
+## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/wikiMobile/)</a>
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/wikiMobile/"><img src="media/screen/Jenkins.png" alt="Jenkins"/></a>  
 </p>
