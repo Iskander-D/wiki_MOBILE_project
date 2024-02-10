@@ -53,7 +53,7 @@ public class AndroidRemoteTests extends TestBase {
     @Test
     @DisplayName("Проверка наличия заголовка")
     void checkNewsHeaderTest() {
-        step("Проверка наличия заголовка'In the news'", () -> {
+        step("Проверка наличия заголовка 'In the news' ", () -> {
             $(id("org.wikipedia.alpha:id/view_card_header_title")).shouldHave(text("In the news"));
         });
     }
