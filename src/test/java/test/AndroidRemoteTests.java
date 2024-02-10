@@ -32,7 +32,7 @@ public class AndroidRemoteTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка отображения значка об ошибки при переходе на статью")
+    @DisplayName("Проверка отображения значка об ошибке при переходе на статью")
     void checkErrorIconTest() {
         step("Делаем поисковой запрос", () -> {
             $(accessibilityId("Search Wikipedia")).click();
