@@ -96,7 +96,7 @@ ____
 ## <img src="media/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1097">Jira</a>
 
 <p align="center">  
-<img title="Jira" src="media/screen/Jira.png">  
+<img title="Jira" src="media/screen/jira.png">  
 </p>
 
 <a id="tg"></a>
