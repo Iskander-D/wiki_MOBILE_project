@@ -16,6 +16,7 @@ import static io.appium.java_client.AppiumBy.id;
 import static io.qameta.allure.Allure.step;
 @Owner("Aleksandr Drozenko")
 @Feature("Тесты мобильного приложения Википедия")
+@DisplayName("Мобильные тесты Википедия на удаленном эмуляторе")
 @Tag("remote")
 public class AndroidRemoteTests extends TestBase {
     @Test
