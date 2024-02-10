@@ -15,29 +15,29 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Aleksandr Drozenko")
-@Feature("Wikipedia Mobile App Tests")
+@Feature("Тесты мобильного приложения Википедия")
 @Tag("local")
 public class AndroidLocalTest extends TestBase {
 
     @Test
-    @DisplayName("Checking onboarding pages  ")
+    @DisplayName("Проверка онбординг-страниц ")
     void onBoardingPagesTest() {
-        step("First onboarding page", () -> {
+        step("Первая страница", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Second onboarding page", () -> {
+        step("Вторая страница", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("New ways to explore"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Third onboarding page", () -> {
+        step("Третья страница", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("Reading lists with sync"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Fourth onboarding page", () -> {
+        step("Четвертая страница", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("Send anonymous data"));
             $(AppiumBy.id("org.wikipedia.alpha:id/acceptButton")).click();
@@ -45,56 +45,56 @@ public class AndroidLocalTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Add new language")
+    @DisplayName("Добавления нового языка")
     void addLanguageTest() {
-        step("Skip onboarding pages", () -> {
+        step("Закрываем экран настроек", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_action_negative")).click();
         });
-        step("Go to language menu", () -> {
+        step("Переходим в языковое меню", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Wikipedia languages")).click();
         });
-        step("Select russian language", () -> {
+        step("Добавляем русский язык", () -> {
             $$(AppiumBy.id("org.wikipedia.alpha:id/wiki_language_title"))
                     .findBy(text("ADD LANGUAGE")).click();
             $$(AppiumBy.id("org.wikipedia.alpha:id/localized_language_name"))
                     .findBy(text("Русский")).click();
         });
-        step("Check language added", () ->
+        step("Проверяем что русский язык добавлен ", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/wiki_language_title"))
                         .filterBy(text("Russian")).shouldHave(size(1)));
     }
 
     @Test
-    @DisplayName("Search page")
+    @DisplayName("Проверка поиска")
     void searchPageTest() {
-        step("Skip onboarding page", () -> back());
+        step("Закрываем экран настроек", () -> back());
 
-        step("Go to search menu", () -> {
+        step("Переходим в меню поиска", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Explore Feed")).click();
         });
-        step("Verify content found", () ->
+        step("Проверяем, что результатов страницы поиска больше 1", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/feed_content_type_title"))
                         .shouldHave(sizeGreaterThan(1)));
     }
 
     @Test
-    @DisplayName("Checking icon of title page")
+    @DisplayName("Проверка иконки титульной страницы")
     void iconTitleTest() {
-        step("Skip onboarding page", () -> back());
+        step("Закрываем экран настроек", () -> back());
 
-        step("Type search", () -> {
+        step("Создаем поисковой запрос Porsche", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Porsche");
         });
-        step("Open first title", () -> {
+        step("Открываем первый заголовок из поиска ", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("Checking icon page", () -> {
+        step("Проверяем наличия иконки на странице", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/view_page_header_image")).should(exist);
         });
     }
