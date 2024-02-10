@@ -81,7 +81,7 @@ ____
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/screen/AllureReport.png">  
+<img title="Allure Overview Dashboard" src="media/screen/AllureR.png">  
 </p>  
 
 <a id="allure-testops"></a>
