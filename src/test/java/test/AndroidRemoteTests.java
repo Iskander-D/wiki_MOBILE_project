@@ -20,14 +20,14 @@ import static io.qameta.allure.Allure.step;
 @Tag("remote")
 public class AndroidRemoteTests extends TestBase {
     @Test
-    @DisplayName("Проверка непустой выдачи при запросе")
+    @DisplayName("Проверить непустой список выдачи при запросе")
     void successfulSearchTest() {
-        step("Делаем поисковой запрос", () -> {
+        step("Сделать поисковой запрос", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Porsche");
         });
 
-        step("Проверяем результат запроса", () ->
+        step("Проверить результат запроса", () ->
                 $$(id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
     }
@@ -35,26 +35,26 @@ public class AndroidRemoteTests extends TestBase {
     @Test
     @DisplayName("Проверка отображения значка об ошибке при переходе на статью")
     void checkErrorIconTest() {
-        step("Делаем поисковой запрос", () -> {
+        step("Сделать поисковой запрос", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
 
-        step("Проверяем результат запроса", () ->
+        step("Проверить результат запроса", () ->
                 $$(id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
 
-        step("Нажимаем на первый элемент", () ->
+        step("Нажать на первый элемент", () ->
                 $$(id("org.wikipedia.alpha:id/page_list_item_container")).first().click());
 
-        step("Убеждаемся, что на странице отображается значок ошибки", () -> {
+        step("Убедиться, что на странице отображается значок ошибки", () -> {
             $(id("org.wikipedia.alpha:id/view_wiki_error_icon")).should(exist);
         });
     }
     @Test
     @DisplayName("Проверка наличия заголовка")
     void checkNewsHeaderTest() {
-        step("Проверка наличия заголовка 'In the news' ", () -> {
+        step("Проверить наличия заголовка 'In the news' ", () -> {
             $(id("org.wikipedia.alpha:id/view_card_header_title")).shouldHave(text("In the news"));
         });
     }

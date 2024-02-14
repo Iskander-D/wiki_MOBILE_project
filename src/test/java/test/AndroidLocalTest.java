@@ -23,22 +23,22 @@ public class AndroidLocalTest extends TestBase {
     @Test
     @DisplayName("Проверка онбординг-страниц ")
     void onBoardingPagesTest() {
-        step("Первая страница", () -> {
+        step("Проверить первую страницу", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Вторая страница", () -> {
+        step("Проверить вторую страницу", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("New ways to explore"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Третья страница", () -> {
+        step("Проверить третью страницу", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("Reading lists with sync"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
         });
-        step("Четвертая страница", () -> {
+        step("Проверить четвертую страницу", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(text("Send anonymous data"));
             $(AppiumBy.id("org.wikipedia.alpha:id/acceptButton")).click();
@@ -48,22 +48,22 @@ public class AndroidLocalTest extends TestBase {
     @Test
     @DisplayName("Добавления нового языка")
     void addLanguageTest() {
-        step("Закрываем экран настроек", () -> {
+        step("Закрыть экран настроек", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_action_negative")).click();
         });
-        step("Переходим в языковое меню", () -> {
+        step("Перейти в языковое меню", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Wikipedia languages")).click();
         });
-        step("Добавляем русский язык", () -> {
+        step("Добавить русский язык", () -> {
             $$(AppiumBy.id("org.wikipedia.alpha:id/wiki_language_title"))
                     .findBy(text("ADD LANGUAGE")).click();
             $$(AppiumBy.id("org.wikipedia.alpha:id/localized_language_name"))
                     .findBy(text("Русский")).click();
         });
-        step("Проверяем что русский язык добавлен ", () ->
+        step("Проверить что русский язык добавлен ", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/wiki_language_title"))
                         .filterBy(text("Russian")).shouldHave(size(1)));
     }
@@ -71,14 +71,14 @@ public class AndroidLocalTest extends TestBase {
     @Test
     @DisplayName("Проверка поиска")
     void searchPageTest() {
-        step("Закрываем экран настроек", () -> back());
+        step("Закрыть экран настроек", () -> back());
 
-        step("Переходим в меню поиска", () -> {
+        step("Перейти в меню поиска", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Explore Feed")).click();
         });
-        step("Проверяем, что результатов страницы поиска больше 1", () ->
+        step("Проверить, что результатов страницы поиска больше 1", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/feed_content_type_title"))
                         .shouldHave(sizeGreaterThan(1)));
     }
@@ -86,16 +86,16 @@ public class AndroidLocalTest extends TestBase {
     @Test
     @DisplayName("Проверка иконки титульной страницы")
     void iconTitleTest() {
-        step("Закрываем экран настроек", () -> back());
+        step("Закрыть экран настроек", () -> back());
 
-        step("Создаем поисковой запрос Porsche", () -> {
+        step("Создать поисковой запрос Porsche", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Porsche");
         });
-        step("Открываем первый заголовок из поиска ", () -> {
+        step("Открыть первый заголовок из поиска ", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("Проверяем наличия иконки на странице", () -> {
+        step("Проверить наличие иконки на странице", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/view_page_header_image")).should(exist);
         });
     }
